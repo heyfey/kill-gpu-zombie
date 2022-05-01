@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: kill-gpu-zombie
+  labels:
+    app: kill-gpu-zombie
+spec:
+  selector:
+    matchLabels:
+      name: kill-gpu-zombie
+  template:
+    metadata:
+      labels:
+        name: kill-gpu-zombie
+    spec:
+      containers:
+      - name: kill-gpu-zombie
+        image: heyfey/kill-gpu-zombie
+        resources:
+          limits:
+            cpu: 100m
+            memory: 200Mi
+          requests:
+            cpu: 100m
+            memory: 200Mi
+        securityContext:
+          privileged: true
+      hostPID: true
