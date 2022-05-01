@@ -25,7 +25,7 @@ prerequisites: `pandas`
 
 ## Run with docker
 
-### Build Umage
+### Build Image
 
 ```
 docker build .
