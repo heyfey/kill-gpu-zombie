@@ -14,6 +14,7 @@ cd kill-gpu-zombie
 sudo python detect_and_kill.py --check-period-second 2.5 --memory-threshold-MiB 20 --kill-threshold-second 90
 ```
 args:
+
 `--check-period-second`: check for zombie process every # seconds
 
 `--memory-threshold-MiB`: view GPU as occupied when memory used exceed # MiB
