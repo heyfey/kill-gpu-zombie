@@ -1,6 +1,6 @@
 # kill-gpu-zombie
 
-Detect and kill zombie process that occupies Nvidia GPU.
+Detect and kill zombie process on Nvidia GPU.
 
 `detect_and_kill.py` views processes that continuously consume GPU memory, but have zero GPU utilization, as "zombie process", which may be hanging or in deadlock, and kill them after a timeout period.
 
@@ -34,7 +34,7 @@ docker build .
 ### Docker Run
 
 ```
-docker run -it --privileged --pid=host heyfey/kill-gpu-zombie
+docker run --privileged --pid=host heyfey/kill-gpu-zombie
 ```
 
 ## Deploy as daemonset in kubernetes cluster
